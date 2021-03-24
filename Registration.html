@@ -1,0 +1,142 @@
+<html>
+    <head><title>Registration Form</title>
+        <script>
+            function f1()
+            {
+                var fname = document.myform.fname.value;
+                var lname = document.myform.lname.value;
+               
+                if (fname == "")
+                {
+                    window.alert("Names Should not be same and Nulllll");
+                } 
+           else if(fname=="" || fname==" ")   
+           {
+               window.alert("Name Shoud not be null or Empty");
+           }
+            else
+                {
+                    return true;
+                }
+            }
+            
+            function f2()
+            {
+                var ph = document.myform.phone.value;
+                
+                if(ph.length < 10 || ph.length >10)
+                {
+                    window.alert("Enter Valid Phone no");
+                }
+            }
+            
+            function f3()
+            {
+                var pas  =document.myform.pass.value;
+                var conpas  = document.myform.conpass.value;
+                
+                if(pas!= conpas)
+                {
+                    window.alert("Password Should be Same");
+                }
+            }
+            
+            function f4()  
+{  
+var x=document.myform.email.value;  
+var at=x.indexOf("@");  
+var dot=x.lastIndexOf(".");  
+if (at<1 || dot<at+2 || dot+2>=x.length){  
+  alert("Please enter a valid e-mail address ");  
+  return false;  
+  }  
+}  
+            
+        </script>
+    </head>
+
+    <body>
+    <center>    
+        <form name="myform" >
+            <h1> Registartion Form</h1>
+            <table>
+
+                <tr>
+                    <td>
+                        <h4> First Name
+                    </td>
+                    <td>
+                        <h4> <input type="text" name="fname" onblur="f1()"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Last Name
+                    </td>
+                    <td>
+                        <h4><input type="text" name="lname" onblur="f1()"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4> Email
+                    </td>
+                    <td>
+                        <h4> <input type="text" name="email" onblur="f4()"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Phone
+                    </td>
+                    <td>
+                        <h4><input type="text" name="phone" onblur="f2()"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Gender
+                    </td>
+                    <td>
+                        <h4><input type="radio" name="gender" id="male">Male
+                            <h4><input type="radio" name="gender" id="female">Female
+                                </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <h4>DOB
+                                    </td>
+                                    <td>
+                                        <h4><input type="date" name="dob" id="dob">
+                                            </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><h4>Password</h4></td>
+                                                <td>
+                                                    <h4><input type="password" name="pass" >
+                                                        </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <h4>Confirm Password
+                                                            </td>
+                                                            <td>
+                                                                <h4><input type="password" name="conpass" onblur="f3()">
+                                                                    </td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>
+                                                                            <h4><input type="submit" value="Submit">
+                                                                                <input type="button" value="Cancel" id="cancel">
+                                                                                </td>
+                                                                                </tr>
+                                                                                </table>
+                                                                                </form>
+                                                                                </center>
+                                                                                </body>
+                                                                                </html>
